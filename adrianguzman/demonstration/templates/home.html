@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
     {% block content %}
         <div style="margin:1%" class="ui secondary pointing menu">
-            <a class="active item">
+            <a class="{% if module == 'home' %}active{% endif %} item">
             Home
             </a>
             <a class="item">

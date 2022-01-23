@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <form action="{% url 'login.handle_login' %}" class="ui form" method="POST">{% csrf_token %}
+        <div class="field">
+          <label>Username</label>
+          <input type="text" name="Username" placeholder="Username" required>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="text" name="Password" placeholder="Password" required>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+    {% endblock content %}

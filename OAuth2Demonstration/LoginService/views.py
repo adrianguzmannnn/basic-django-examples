@@ -30,7 +30,7 @@ def handle_login(request: WSGIRequest) -> HttpResponse:
 
 
 @require_http_methods(["GET"])
-def validate(request: WSGIRequest, token: uuid.uuid4) -> HttpResponse:
+def validate(request: WSGIRequest, token: str) -> HttpResponse:
     if token == User.objects.get(username="tonystark", password="ironman123").expected_token:
         return HttpResponse(content="Success.", status=http.HTTPStatus.OK)
     return HttpResponse(content='Failure.', status=http.HTTPStatus.UNAUTHORIZED)

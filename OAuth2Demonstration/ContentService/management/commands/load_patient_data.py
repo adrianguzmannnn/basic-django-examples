@@ -40,7 +40,7 @@ class Command(BaseCommand):
     """A command to insert data to the Patient model."""
     help = "Loads default data into the Patient model."
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **kwargs):
         if Patient.objects.exists():
             print("The table is already populated.")
             return

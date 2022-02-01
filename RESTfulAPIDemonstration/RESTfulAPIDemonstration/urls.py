@@ -17,4 +17,7 @@ urlpatterns = [
 
     # Handle admin routes.
     path('admin/', admin.site.urls),
+
+    # Handle the front-end routes.
+    path('chess/', Forum.views.chess),
 ]
